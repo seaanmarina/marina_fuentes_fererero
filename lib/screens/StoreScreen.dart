@@ -46,13 +46,24 @@ class StoreScreen extends StatelessWidget {
             (BuildContext context, int index) {
               return Center(
                 child: Card(
-                  color: Color.fromRGBO(150, 131, 236, 1),
+                  color: storeController.colores[index],
                   child: SizedBox(
-                    width: 300,
-                    height: 100,
-                    child: Center(
+                    width: MediaQuery.of(context).size.width / 1.2,
+                    height: MediaQuery.of(context).size.height / 6,
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
                         child: Text(
-                            storeController.tiposDeClases[index].toString())),
+                          storeController.tiposDeClases[index].toString(),
+                          style: TextStyle(
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 23,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               );

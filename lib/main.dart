@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:marina_fuentes_fererero/screens/TabBarScreen.dart';
 import 'package:marina_fuentes_fererero/widgets/MyCart.dart';
 import 'package:marina_fuentes_fererero/screens/StoreScreen.dart';
 
@@ -12,6 +14,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: StoreScreen());
+    return GetMaterialApp(home: TabBarScreen());
   }
 }
