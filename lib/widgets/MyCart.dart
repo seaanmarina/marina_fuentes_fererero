@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({super.key});
+  MyCard({super.key, required this.title});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class MyCard extends StatelessWidget {
         child: SizedBox(
           width: 300,
           height: 100,
-          child: Center(child: Text('Elevated Card')),
+          child: Center(child: Text(title)),
         ),
       ),
     ));

@@ -44,11 +44,16 @@ class StoreScreen extends StatelessWidget {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {
-              return Container(
-                color: index.isOdd ? Colors.white : Colors.black12,
-                height: 100.0,
-                child: Center(
-                  child: Text(storeController.tiposDeClases[index].toString()),
+              return Center(
+                child: Card(
+                  color: Color.fromRGBO(150, 131, 236, 1),
+                  child: SizedBox(
+                    width: 300,
+                    height: 100,
+                    child: Center(
+                        child: Text(
+                            storeController.tiposDeClases[index].toString())),
+                  ),
                 ),
               );
             },
